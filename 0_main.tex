@@ -1,0 +1,71 @@
+\documentclass[usenames,dvipsnames,t]{beamer}
+%----------------------------------------------------------------------------
+% Load all useful packages
+\usepackage{1_packages} 
+%----------------------------------------------------------------------------
+% Load custom commands
+\input{2_commandes.sty}
+%----------------------------------------------------------------------------
+% Default path for figures
+%\graphicspath{{images/}}
+%----------------------------------------------------------------------------
+% Remove 'figure' and 'table' from the legend's label when using \caption
+\captionsetup[figure]{labelformat=empty}
+%\captionsetup[table]{labelformat=empty}
+%\captionsetup[subfigure]{labelformat=empty}
+%----------------------------------------------------------------------------
+% Title page
+\title{Title}
+%\titlegraphic{
+%\doublecolumns{0.5}{
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{images/}
+%\end{figure}}
+%{0.5}{
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{images/}
+%\end{figure}\vspace{0.1cm}}
+%{}}
+\author{Author}
+\date{\today}
+%----------------------------------------------------------------------------
+% Custom template
+\input{3_beamer_custom_theme.sty}
+%----------------------------------------------------------------------------
+% Ressources biblio
+\addbibresource{4_biblio.bib}
+% style is defined in packages.sty, when the package "biblatex" is called
+%----------------------------------------------------------------------------
+\begin{document}
+%~~~~~~~~~~~~~~~~~ Title and contents ~~~~~~~~~~~~~~~~~
+\begin{frame}
+\titlepage
+%\nobibliography{biblio}
+\end{frame}
+%\begin{frame}[label=sommaire]
+%\tableofcontents[hideallsubsections]
+%\end{frame}
+%\frame{\tableofcontents}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%----------------------------------------------------------------------------
+\input{5_introduction}
+\input{6_conclusion}
+\input{7_appendix}
+\printbibliography[heading=bibintoc,title={Bibliographie}]
+%\printbibliography[heading=subbibintoc,type=article,title={Articles only}]
+
+\end{document}
+
+% Command to split a frame into 2 columns (can add more columns)
+%\begin{columns}[c]
+%	\begin{column}{0.8\textwidth}
+%	\end{column}
+%	\begin{column}{0.3\textwidth}
+%	\end{column}
+%\end{columns}
+
+
+
+
